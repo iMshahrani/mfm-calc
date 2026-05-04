@@ -206,8 +206,10 @@
     .checkbox-row input[type="checkbox"] { width:16px; height:16px; margin-top:2px; accent-color:var(--blue-600); flex-shrink:0; cursor:pointer; }
     .checkbox-row label { font-size:13px; color:var(--gray-800); cursor:pointer; line-height:1.4; }
 
-    .ga-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-    .ga-row select { width:100%; }
+    .ga-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .ga-row select { width:100%; height:44px; border:1.5px solid #d4d5d8; border-radius:8px; padding:0 10px; font-size:15px; font-family:var(--font); background:#fafafa; color:var(--gray-900); appearance:auto; outline:none; cursor:pointer; }
+    .ga-row select:focus { border-color:var(--blue-400); }
+    .ga-row-label { display:block; font-size:11px; font-weight:600; color:var(--gray-400); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px; }
 
     .btn-calculate { width:100%; height:42px; color:#fff; border:none; border-radius:var(--radius-sm); font-size:15px; font-weight:500; cursor:pointer; margin-top:1.25rem; transition:background .15s; font-family:var(--font); }
     .btn-calculate.blue-btn { background:var(--blue-600); }
@@ -587,13 +589,19 @@
             <div class="field">
               <label>GA at Scan</label>
               <div class="ga-row">
-                <select id="ga-us-weeks"><option value="">Weeks</option></select>
-                <select id="ga-us-days-sel">
-                  <option value="0">+0 days</option><option value="1">+1 day</option>
-                  <option value="2">+2 days</option><option value="3">+3 days</option>
-                  <option value="4">+4 days</option><option value="5">+5 days</option>
-                  <option value="6">+6 days</option>
-                </select>
+                <div>
+                  <span class="ga-row-label">Weeks</span>
+                  <select id="ga-us-weeks"><option value="">-- wks --</option></select>
+                </div>
+                <div>
+                  <span class="ga-row-label">Days</span>
+                  <select id="ga-us-days-sel">
+                    <option value="0">+0 d</option><option value="1">+1 d</option>
+                    <option value="2">+2 d</option><option value="3">+3 d</option>
+                    <option value="4">+4 d</option><option value="5">+5 d</option>
+                    <option value="6">+6 d</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -903,18 +911,24 @@
           <div class="field">
             <label>Weeks + Days</label>
             <div class="ga-row">
-              <select id="mca-weeks">
-                <option value="">Weeks</option>
-              </select>
-              <select id="mca-days">
-                <option value="0">+0 days</option>
-                <option value="1">+1 day</option>
-                <option value="2">+2 days</option>
-                <option value="3">+3 days</option>
-                <option value="4">+4 days</option>
-                <option value="5">+5 days</option>
-                <option value="6">+6 days</option>
-              </select>
+              <div>
+                <span class="ga-row-label">Weeks</span>
+                <select id="mca-weeks">
+                  <option value="">-- wks --</option>
+                </select>
+              </div>
+              <div>
+                <span class="ga-row-label">Days</span>
+                <select id="mca-days">
+                  <option value="0">+0 d</option>
+                  <option value="1">+1 d</option>
+                  <option value="2">+2 d</option>
+                  <option value="3">+3 d</option>
+                  <option value="4">+4 d</option>
+                  <option value="5">+5 d</option>
+                  <option value="6">+6 d</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -1048,13 +1062,19 @@
           <div class="field">
             <label>Weeks + Days</label>
             <div class="ga-row">
-              <select id="hc-weeks"><option value="">Weeks</option></select>
-              <select id="hc-days">
-                <option value="0">+0 days</option><option value="1">+1 day</option>
-                <option value="2">+2 days</option><option value="3">+3 days</option>
-                <option value="4">+4 days</option><option value="5">+5 days</option>
-                <option value="6">+6 days</option>
-              </select>
+              <div>
+                <span class="ga-row-label">Weeks</span>
+                <select id="hc-weeks"><option value="">-- wks --</option></select>
+              </div>
+              <div>
+                <span class="ga-row-label">Days</span>
+                <select id="hc-days">
+                  <option value="0">+0 d</option><option value="1">+1 d</option>
+                  <option value="2">+2 d</option><option value="3">+3 d</option>
+                  <option value="4">+4 d</option><option value="5">+5 d</option>
+                  <option value="6">+6 d</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -1209,13 +1229,19 @@
           <div class="field">
             <label>Weeks + Days</label>
             <div class="ga-row">
-              <select id="lhr-weeks"><option value="">Weeks</option></select>
-              <select id="lhr-days">
-                <option value="0">+0 days</option><option value="1">+1 day</option>
-                <option value="2">+2 days</option><option value="3">+3 days</option>
-                <option value="4">+4 days</option><option value="5">+5 days</option>
-                <option value="6">+6 days</option>
-              </select>
+              <div>
+                <span class="ga-row-label">Weeks</span>
+                <select id="lhr-weeks"><option value="">-- wks --</option></select>
+              </div>
+              <div>
+                <span class="ga-row-label">Days</span>
+                <select id="lhr-days">
+                  <option value="0">+0 d</option><option value="1">+1 d</option>
+                  <option value="2">+2 d</option><option value="3">+3 d</option>
+                  <option value="4">+4 d</option><option value="5">+5 d</option>
+                  <option value="6">+6 d</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -1858,13 +1884,19 @@
           <div class="field">
             <label>Weeks + Days</label>
             <div class="ga-row">
-              <select id="uapi-weeks"><option value="">Weeks</option></select>
-              <select id="uapi-days">
-                <option value="0">+0 days</option><option value="1">+1 day</option>
-                <option value="2">+2 days</option><option value="3">+3 days</option>
-                <option value="4">+4 days</option><option value="5">+5 days</option>
-                <option value="6">+6 days</option>
-              </select>
+              <div>
+                <span class="ga-row-label">Weeks</span>
+                <select id="uapi-weeks"><option value="">-- wks --</option></select>
+              </div>
+              <div>
+                <span class="ga-row-label">Days</span>
+                <select id="uapi-days">
+                  <option value="0">+0 d</option><option value="1">+1 d</option>
+                  <option value="2">+2 d</option><option value="3">+3 d</option>
+                  <option value="4">+4 d</option><option value="5">+5 d</option>
+                  <option value="6">+6 d</option>
+                </select>
+              </div>
             </div>
           </div>
 
